@@ -1,0 +1,25 @@
+[project]
+name = "student-directory-api"
+version = "0.1.0"
+description = "API REST pour gérer un annuaire d'étudiants"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+# Règles activées :
+# E/W  = erreurs de style pycodestyle
+# F    = pyflakes (variables inutilisées, imports inutilisés...)
+# I    = tri des imports (isort)
+# UP   = syntaxe moderne Python
+# B    = bugbear (pièges courants)
+# T20  = interdit les print() oubliés
+select = ["E", "W", "F", "I", "UP", "B", "T20"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

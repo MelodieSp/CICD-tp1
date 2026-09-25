@@ -6,7 +6,7 @@ __pycache__/
 .eggs/
 
 # Environnements virtuels
-.venv/
+.venv/*
 venv/
 env/
 
