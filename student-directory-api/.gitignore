@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 *.egg-info/
 .eggs/
+src/__pycache__/
 
 # Environnements virtuels
 .venv/*
@@ -22,3 +23,4 @@ htmlcov/
 .vscode/
 .idea/
 .DS_Store
+uv.lock
