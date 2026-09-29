@@ -1,13 +1,21 @@
 from fastapi import FastAPI
+
 from src.repository import StudentRepository
 
 app = FastAPI()
-StudentRepository = StudentRepository()
+students = StudentRepository()
+
 
 @app.get("/")
 def root():
     return {"ok"}
 
+
 @app.get("/students")
 def get_students():
-    return StudentRepository.get_all()
+    return students.get_all()
+
+
+@app.get("/students/:id")
+def get_students():
+    return students.get_all()

@@ -7,18 +7,10 @@ class FieldEnum(StrEnum):
     PHYSIQUE = "physique"
     CHIMIE = "chimie"
 
-
-class StudentsBase(BaseModel):
+class Student(BaseModel):
+    id: int
     firstName: str = Field(min_length=2)
     lastName: str = Field(min_length=2)
     email: EmailStr
     grade: float = Field(ge=0, le=20)
     field: FieldEnum
-
-class Student(StudentsBase):
-    id: int
-
-class StudentCreate(StudentsBase):
-    pass
-class StudentUpdate(StudentsBase):
-    pass

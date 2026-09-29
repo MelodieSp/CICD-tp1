@@ -1,4 +1,4 @@
-from src.models import Student, StudentCreate, StudentUpdate
+from src.models import Student
 from src.seed_data import SEED_STUDENTS
 
 
@@ -6,7 +6,7 @@ class StudentRepository:
     def __init__(self):
         self._students: list[Student] = []
         self._next_id = 1
-        self._seed()
+        self.reset()
 
     def get(self, student_id: int) -> Student | None:
         return next((s for s in self._students if s.id == student_id), None)
@@ -14,17 +14,17 @@ class StudentRepository:
     def get_all(self):
         return self._students
 
-    def create(self, data: StudentCreate) -> Student:
-        student = Student(id=self._next_id, **data.model_dump())
+    def create(self, data: dict) -> Student:
+        student = Student(id=self._next_id, **data)
         self._students.append(student)
         self._next_id += 1
         return student
 
-    def update(self, student_id: int, data: StudentUpdate) -> Student | None:
+    def update(self, student_id: int, data: dict) -> Student | None:
         existing = self.get(student_id)
         if not existing:
             return None
-        updated = Student(id=student_id, **data.model_dump())
+        updated = Student(id=student_id, **data)
         idx = self._students.index(existing)
         self._students[idx] = updated
         return updated
@@ -36,12 +36,8 @@ class StudentRepository:
         self._students.remove(existing)
         return True
 
-    def _seed(self):
+    def reset(self):
         self._students = []
         self._next_id = 1
         for data in SEED_STUDENTS:
-            self._students.append(Student(id=self._next_id, **data))
-            self._next_id += 1
-
-    def reset(self):
-        self._seed()
+            self.create(data)
