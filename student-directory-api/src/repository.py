@@ -11,6 +11,9 @@ class StudentRepository:
     def get(self, student_id: int) -> Student | None:
         return next((s for s in self._students if s.id == student_id), None)
 
+    def get_all(self):
+        return self._students
+
     def create(self, data: StudentCreate) -> Student:
         student = Student(id=self._next_id, **data.model_dump())
         self._students.append(student)
