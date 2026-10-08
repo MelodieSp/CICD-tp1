@@ -1,11 +1,14 @@
 from enum import StrEnum
+
 from pydantic import BaseModel, EmailStr, Field
+
 
 class FieldEnum(StrEnum):
     INFORMATIQUE = "informatique"
     MATHEMATIQUES = "mathématiques"
     PHYSIQUE = "physique"
     CHIMIE = "chimie"
+
 
 class Student(BaseModel):
     id: int

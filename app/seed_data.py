@@ -1,7 +1,6 @@
 SEED_STUDENTS = [
     # --- informatique ---
     {
-        "id": 1,
         "firstName": "Ahmed",
         "lastName": "Ben Salah",
         "email": "ahmed.bensalah@example.com",
@@ -9,7 +8,6 @@ SEED_STUDENTS = [
         "field": "informatique",
     },
     {
-        "id": 2,
         "firstName": "Yanis",
         "lastName": "Dubois",
         "email": "yanis.dubois@example.com",
@@ -17,7 +15,6 @@ SEED_STUDENTS = [
         "field": "informatique",
     },
     {
-        "id": 3,
         "firstName": "Mei",
         "lastName": "Chen",
         "email": "mei.chen@example.com",
@@ -26,7 +23,6 @@ SEED_STUDENTS = [
     },
     # --- mathématiques ---
     {
-        "id": 4,
         "firstName": "Léa",
         "lastName": "Martin",
         "email": "lea.martin@example.com",
@@ -34,7 +30,6 @@ SEED_STUDENTS = [
         "field": "mathématiques",
     },
     {
-        "id": 5,
         "firstName": "Ibrahim",
         "lastName": "Diallo",
         "email": "ibrahim.diallo@example.com",
@@ -42,7 +37,6 @@ SEED_STUDENTS = [
         "field": "mathématiques",
     },
     {
-        "id": 6,
         "firstName": "Camille",
         "lastName": "Petit",
         "email": "camille.petit@example.com",
@@ -51,7 +45,6 @@ SEED_STUDENTS = [
     },
     # --- physique ---
     {
-        "id": 7,
         "firstName": "Karim",
         "lastName": "Haddad",
         "email": "karim.haddad@example.com",
@@ -59,7 +52,6 @@ SEED_STUDENTS = [
         "field": "physique",
     },
     {
-        "id": 8,
         "firstName": "Elena",
         "lastName": "Popescu",
         "email": "elena.popescu@example.com",
@@ -67,7 +59,6 @@ SEED_STUDENTS = [
         "field": "physique",
     },
     {
-        "id": 9,
         "firstName": "Thomas",
         "lastName": "Lefevre",
         "email": "thomas.lefevre@example.com",
@@ -76,7 +67,6 @@ SEED_STUDENTS = [
     },
     # --- chimie ---
     {
-        "id": 10,
         "firstName": "Sofia",
         "lastName": "Rossi",
         "email": "sofia.rossi@example.com",
@@ -84,7 +74,6 @@ SEED_STUDENTS = [
         "field": "chimie",
     },
     {
-        "id": 11,
         "firstName": "Nora",
         "lastName": "Ferreira",
         "email": "nora.ferreira@example.com",
@@ -92,7 +81,6 @@ SEED_STUDENTS = [
         "field": "chimie",
     },
     {
-        "id": 12,
         "firstName": "Hugo",
         "lastName": "Bernard",
         "email": "hugo.bernard@example.com",
